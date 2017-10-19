@@ -19,7 +19,11 @@ public class RestResultGenerator {
      */
     public static <T> ResponseResult<T> genResult(T data, ResponseSuccessEnum responseSuccessEnum) {
         ResponseResult<T> result = new ResponseResult<T>();
-        result.setSuccess(true);
+        boolean check = false;
+        if(data!=null){
+            check = true;
+        }
+        result.setSuccess(check);
         result.setResult(data);
         result.setMessage(responseSuccessEnum.getName());
         result.setCode(responseSuccessEnum.getIndex());

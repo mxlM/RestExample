@@ -4,7 +4,7 @@ package com.panodata.conf.response;
  * Created by wp_sp on 2017/3/28.
  */
 public enum ResponseSuccessEnum  {
-    SUCCESS("请求正常", "200");
+    SUCCESS("请求正常", "200"),PARAMETER_ERROR("请求参数错误,无返回记录","P001"),UPDATE_ERROR("更新失败","P002");
 
     // 成员变量
     private String name;
